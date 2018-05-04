@@ -1,0 +1,483 @@
+/* Colors */
+
+@main-black: rgb(26, 26, 24);
+@white: rgb(255, 255, 255);
+@btn: rgb(0, 150, 218);
+@bg-light: rgb(243, 243, 243);
+
+/* Basic */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    overflow-x: hidden;
+    color: @main-black;
+    .reg;
+}
+
+.visible-lg {
+    display: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    font-size: 2rem;
+    .bold
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+iframe {
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    max-width: 30rem;
+    width: 95%;
+    background-color: @btn;
+    color: @white;
+    padding: 2rem;
+    margin: 3rem auto;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    text-align: center;
+    &:hover {
+        color: @white;
+        background-color: darken(@btn, 10%);
+    }
+    &:focus {
+        color: @white;
+    }
+}
+
+.small-text {
+    opacity: .75;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Fonts */
+
+.bold {
+    font-family: "RobotoBold";
+}
+
+.reg {
+    font-family: "RobotoRegular";
+}
+
+.light {
+    font-family: "RobotoLight";
+}
+
+
+/* Header */
+
+.header {
+    background: url(../img/header-mobile-bg.jpg)no-repeat center center;
+    background-size: cover;
+    color: @white;
+    padding-top: 2rem;
+    height: 100vh;
+    min-height: 60rem;
+    &-logo {
+        margin-right: 1rem;
+        width: 30px;
+    }
+    &-text {
+        text-align: center;
+        p {
+            font-size: 1.4rem;
+            color: @bg-light;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+.nav {
+    &-link {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        background-color: rgba(255, 255, 255, .2);
+        margin: auto;
+    }
+    &-line {
+        content: '';
+        display: block;
+        background-color: @btn;
+        width: 20px;
+        height: 2px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -10px;
+    }
+    &-line:before {
+        content: '';
+        display: block;
+        background-color: @btn;
+        width: 20px;
+        height: 2px;
+        position: relative;
+        transform: translateY(-5px);
+    }
+    &-line:after {
+        content: '';
+        display: block;
+        background-color: @btn;
+        width: 20px;
+        height: 2px;
+        position: relative;
+        transform: translateY(3px);
+    }
+}
+
+.navigation-mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: @btn;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    z-index: 99;
+    ul {
+        height: 50%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        a {
+            display: block;
+            color: @white;
+            font-size: 2rem;
+            text-transform: uppercase;
+            .light;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 4rem;
+        font-size: 3rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &_active {
+        transform: translateX(0%);
+    }
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    .light;
+    span {
+        display: block;
+    }
+}
+
+.main-logo {
+    color: @btn;
+    font-family: 'Bad Script', sans-serif;
+    font-size: 6rem;
+    text-shadow: 0 0 45px #000;
+    margin-top: 12rem;
+    font-weight: 700;
+}
+
+
+/* About */
+
+.about {
+    &-text {
+        text-align: center;
+    }
+    &-features {
+        text-align: center;
+        img {
+            margin-top: 5rem;
+            width: 90%;
+            max-width: 12rem;
+        }
+    }
+    &-slider {
+        margin-top: 4rem;
+        text-align: center;
+        img {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+}
+
+.arrow {
+    background: @white;
+    border: none;
+    border-radius: 4px;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 6rem;
+    z-index: 1;
+    img {
+        width: 2rem;
+    }
+    &-left {
+        left: 1rem;
+        img {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+/* Video */
+
+section#video {
+    background: @bg-light;
+}
+
+.video {
+    &-text {
+        text-align: center;
+        h2 {
+            margin: 0;
+        }
+        p {
+            opacity: .75;
+            margin: 0;
+        }
+    }
+    &-iframe {
+        width: 95%;
+        max-width: 60rem;
+        display: block;
+        margin: 0 auto;
+        height: 30rem;
+    }
+}
+
+
+/* List */
+
+.section-header {
+    text-align: center;
+    font-size: 2rem;
+    .bold;
+}
+
+.cd-item:nth-of-type(1) {
+    background: url(../img/quests/1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    a {
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+.cd-item:nth-of-type(2) {
+    background: url(../img/quests/2.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    a {
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+.cd-item:nth-of-type(3) {
+    background: url(../img/quests/3.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    a {
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+.cd-item:nth-of-type(4) {
+    background: url(../img/quests/4.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    a {
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+
+/* FAQ */
+
+.faq {
+    &-link {
+        display: block;
+        color: @main-black;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        &:hover {
+            color: @btn;
+        }
+    }
+}
+
+.well {
+    padding: 2rem;
+}
+
+.arrow-faq {
+    margin-right: 1rem;
+    width: 2rem;
+    transform: rotate(0deg);
+    &_active {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* Ticket */
+
+section#ticket {
+    background: @bg-light;
+    padding: 4rem 1.5rem;
+}
+
+.balls-left,
+.balls-right {
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: @bg-light;
+    }
+}
+
+.balls-left {
+    left: -5px;
+}
+
+.balls-right {
+    right: -5px;
+}
+
+.ticket-body {
+    background-color: @btn;
+    position: relative;
+    color: #fff;
+    padding: 6rem 4rem 4rem;
+    text-align: center;
+    p {
+        margin-top: 3rem;
+    }
+}
+
+.price {
+    &-tag {
+        display: block;
+        font-size: 2rem;
+    }
+    &-btn {
+        width: 100%;
+        background-color: #fff;
+        color: @btn;
+        margin: 0;
+        &:focus {
+            color: @btn;
+        }
+    }
+}
+
+
+/* Footer */
+
+#footer {
+    background: @main-black;
+    color: #fff;
+    text-align: center;
+}
+
+.facebook {
+    border: none;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 4rem auto;
+}
+
+.instagram {
+    border: none;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 4rem auto;
+}
+
+.contacts {
+    p {
+        margin: .3rem;
+        opacity: .9;
+        a {
+            display: block;
+            margin: 1.4rem;
+            font-size: 2rem;
+        }
+    }
+}
